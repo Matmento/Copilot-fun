@@ -1,8 +1,8 @@
-//make the button play a fart sound when clicked
-function fart() {
-  var fart = new Audio("fart.mp3");
-  fart.play();
-}
+//load fart.mp3 on page load
+window.onload = function () {
+  var audio = new Audio("fart.mp3");
+  audio.play();
+};
 
 //make a shake animation when the button is clicked
 function shake() {
