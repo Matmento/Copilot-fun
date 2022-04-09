@@ -35,7 +35,7 @@ function shake() {
   document.getElementById("silly").classList.add("shake");
   setTimeout(function () {
     document.getElementById("silly").classList.remove("shake");
-  }, 1000);
+  }, 1500);
 }
 
 //make a tremble animation when the angry button is clicked
