@@ -2,13 +2,12 @@
       SOUNDS 
  ******************/
 
+//get the audiofile
+
 //make the silly button play a fart sound when clicked
 function fart() {
-  console.log("fart function called");
   var fart = new Audio("fart.mp3");
-  console.log("variable with audio file created");
   fart.play();
-  console.log("audio file played");
 }
 
 //make the angry button play a yell sound when clicked
