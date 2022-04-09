@@ -2,9 +2,9 @@
       SOUNDS 
  ******************/
 
-//make the silly button play fart.mp3 from the dom when clicked
+//getting the fart sound from the dom and playing it
 function fart() {
-  var fart = document.getElementById("fart02");
+  var fart = document.getElementById("fart");
   fart.play();
 }
 
@@ -13,27 +13,27 @@ function fart() {
   fart.play();
 }*/
 
-//make the angry button play a yell sound when clicked
+//getting the yell sound from the dom and playing it
 function yell() {
-  var yell = new Audio("yell.wav");
+  var yell = document.getElementById("yell");
   yell.play();
 }
 
-//make the happy button play a wee sound when clicked
+//getting the wee sound from the dom and playing it
 function wee() {
-  var wee = new Audio("wee.ogg");
+  var wee = document.getElementById("wee");
   wee.play();
 }
 
-//make the sad button play a moan sound when clicked
+//getting the moan sound from the dom and playing it
 function moan() {
-  var moan = new Audio("moan.ogg");
+  var moan = document.getElementById("moan");
   moan.play();
 }
 
-//make the scared button play a scream sound when clicked
+//getting the sound from the dom and playing it
 function scream() {
-  var scream = new Audio("scared.wav");
+  var scream = document.getElementById("scream");
   scream.play();
 }
 
