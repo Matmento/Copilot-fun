@@ -3,6 +3,7 @@
   --angry-color: #cc333f;
   --happy-color: #edc952;
   --sad-color: #00a0b0;
+  --scared-color: #5b20ad;
 }
 
 body {
@@ -216,6 +217,51 @@ button {
     transform-origin: 50% 100%;
   }
 }
+
+/*
+ 
+   _   _ ___ ____  _____      _    _   _ ___ __  __    _  _____ ___ ___  _   _ 
+  | | | |_ _|  _ \| ____|    / \  | \ | |_ _|  \/  |  / \|_   _|_ _/ _ \| \ | |
+  | |_| || || | | |  _|     / _ \ |  \| || || |\/| | / _ \ | |  | | | | |  \| |
+  |  _  || || |_| | |___   / ___ \| |\  || || |  | |/ ___ \| |  | | |_| | |\  |
+  |_| |_|___|____/|_____| /_/   \_\_| \_|___|_|  |_/_/   \_\_| |___\___/|_| \_|
+                                                                               
+ 
+*/
+.hide {
+  position: relative;
+  z-index: -1;
+  animation-name: hide;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0, 0.8, 0, 1.01);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: both;
+  animation-fill-mode: none;
+  background-color: var(--scared-color);
+  color: #fff;
+  border: none;
+}
+
+@keyframes hide {
+  0% {
+    transform: translateX(0px);
+  }
+  30% {
+    transform: translateX(0px) scale(0.8, 1);
+  }
+  50% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
 /* * 
 See all the boxes
 {

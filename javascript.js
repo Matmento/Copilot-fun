@@ -26,6 +26,12 @@ function moan() {
   moan.play();
 }
 
+//make the scared button play a scream sound when clicked
+function scream() {
+  var scream = new Audio("scared.wav");
+  scream.play();
+}
+
 /***************** 
      ANIMATIONS 
  ******************/
@@ -51,7 +57,7 @@ function bounce() {
   document.getElementById("happy").classList.add("bounce");
   setTimeout(function () {
     document.getElementById("happy").classList.remove("bounce");
-  }, 2000);
+  }, 1250);
 }
 
 //make a flatten animation when the sad button is clicked
@@ -60,6 +66,14 @@ function flatten() {
   setTimeout(function () {
     document.getElementById("sad").classList.remove("flatten");
   }, 1000);
+}
+
+//make a hide animation when the scared button is clicked
+function hide() {
+  document.getElementById("scared").classList.add("hide");
+  setTimeout(function () {
+    document.getElementById("scared").classList.remove("hide");
+  }, 1500);
 }
 
 /***************** 
@@ -78,6 +92,9 @@ document.getElementById("happy").addEventListener("click", bounce);
 //add an event listener to the sad button that calls the flatten function
 document.getElementById("sad").addEventListener("click", flatten);
 
+//add an event listener to the scared button that calls the hide function
+document.getElementById("scared").addEventListener("click", hide);
+
 //call the fart function when the silly button is clicked
 document.getElementById("silly").addEventListener("click", fart);
 
@@ -89,3 +106,6 @@ document.getElementById("happy").addEventListener("click", wee);
 
 //call the moan function when the sad button is clicked
 document.getElementById("sad").addEventListener("click", moan);
+
+//call the scream function when the scared button is clicked
+document.getElementById("scared").addEventListener("click", scream);
