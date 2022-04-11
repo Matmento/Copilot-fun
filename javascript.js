@@ -1,17 +1,26 @@
-/***************** 
-      SOUNDS 
- ******************/
+/*******************
+ ***** SOUNDS ******
+ *******************/
+
+//retriew the fart, yell, wee, moan and scream sounds from the dom and play them
+/* function playSounds() {
+  var fart = document.getElementById("fart");
+  var yell = document.getElementById("yell");
+  var wee = document.getElementById("wee");
+  var moan = document.getElementById("moan");
+  var scream = document.getElementById("scream");
+  fart.play();
+  yell.play();
+  wee.play();
+  moan.play();
+  scream.play();
+} */
 
 //getting the fart sound from the dom and playing it
 function fart() {
   var fart = document.getElementById("fart");
   fart.play();
 }
-
-/*function fart() {
-  var fart = new Audio("fart.mp3");
-  fart.play();
-}*/
 
 //getting the yell sound from the dom and playing it
 function yell() {
@@ -31,17 +40,27 @@ function moan() {
   moan.play();
 }
 
-//getting the sound from the dom and playing it
+//getting the scream sound from the dom and playing it
 function scream() {
   var scream = document.getElementById("scream");
   scream.play();
 }
 
+/** LEGACY CODE **
+This audio retrivel method resulted in the audio being out of sync:
+
+function fart() {
+  var fart = new Audio("fart.mp3");
+  fart.play();
+}
+
+*/
+
 /***************** 
      ANIMATIONS 
  ******************/
 
-//make a shake animation when the silly button is clicked
+//activate the shake animation when the silly button is clicked
 function shake() {
   document.getElementById("silly").classList.add("shake");
   setTimeout(function () {
@@ -49,7 +68,7 @@ function shake() {
   }, 1500);
 }
 
-//make a tremble animation when the angry button is clicked
+//activate the tremble animation when the angry button is clicked
 function tremble() {
   document.getElementById("angry").classList.add("tremble");
   setTimeout(function () {
@@ -57,7 +76,7 @@ function tremble() {
   }, 1000);
 }
 
-//make a bounce animation when the happy button is clicked
+//activate the bounce animation when the happy button is clicked
 function bounce() {
   document.getElementById("happy").classList.add("bounce");
   setTimeout(function () {
@@ -65,7 +84,7 @@ function bounce() {
   }, 1250);
 }
 
-//make a flatten animation when the sad button is clicked
+//activate the flatten animation when the sad button is clicked
 function flatten() {
   document.getElementById("sad").classList.add("flatten");
   setTimeout(function () {
@@ -73,7 +92,7 @@ function flatten() {
   }, 1000);
 }
 
-//make a hide animation when the scared button is clicked
+//activate the hide animation when the scared button is clicked
 function hide() {
   document.getElementById("scared").classList.add("hide");
   setTimeout(function () {
@@ -81,9 +100,9 @@ function hide() {
   }, 1500);
 }
 
-/***************** 
-  EVENTLISTNERS 
- ******************/
+/****************************** 
+  EVENTLISTNERS for ANIMATIONS
+ ******************************/
 
 //add an event listener to the silly button that calls the shake function
 document.getElementById("silly").addEventListener("click", shake);
@@ -99,6 +118,10 @@ document.getElementById("sad").addEventListener("click", flatten);
 
 //add an event listener to the scared button that calls the hide function
 document.getElementById("scared").addEventListener("click", hide);
+
+/*************************** 
+  EVENTLISTNERS for SOUNDS
+ ***************************/
 
 //call the fart function when the silly button is clicked
 document.getElementById("silly").addEventListener("click", fart);
