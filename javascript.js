@@ -1,91 +1,51 @@
-/***************** 
-      SOUNDS 
- ******************/
+/************************************** 
+       ANIMATIONS and SOUNDS
+ *************************************/
 
-//make the silly button play a fart sound when clicked
-function fart() {
-  var fart = new Audio("fart.mp3");
-  fart.play();
-}
-
-//make the angry button play a yell sound when clicked
-function yell() {
-  var yell = new Audio("yell.wav");
-  yell.play();
-}
-
-//make the happy button play a wee sound when clicked
-function wee() {
-  var wee = new Audio("wee.ogg");
-  wee.play();
-}
-
-//make the sad button play a moan sound when clicked
-function moan() {
-  var moan = new Audio("moan.ogg");
-  moan.play();
-}
-
-/***************** 
-     ANIMATIONS 
- ******************/
-
-//make a shake animation when the silly button is clicked
-function shake() {
+/* SILLY */
+/* Add an event listener to the silly button that:
+- Calls the shake function, that adds and then after 1500 ms removes the shake class. 
+- And that plays the fart sound. */
+document.getElementById("silly").addEventListener("click", function () {
   document.getElementById("silly").classList.add("shake");
   setTimeout(function () {
     document.getElementById("silly").classList.remove("shake");
-  }, 1000);
-}
+  }, 1500);
+  document.getElementById("fart").play();
+});
 
-//make a tremble animation when the angry button is clicked
-function tremble() {
+/* ANGRY */
+document.getElementById("angry").addEventListener("click", function () {
   document.getElementById("angry").classList.add("tremble");
   setTimeout(function () {
     document.getElementById("angry").classList.remove("tremble");
-  }, 1000);
-}
+  }, 1250);
+  document.getElementById("yell").play();
+});
 
-//make a bounce animation when the happy button is clicked
-function bounce() {
+/* HAPPY */
+document.getElementById("happy").addEventListener("click", function () {
   document.getElementById("happy").classList.add("bounce");
   setTimeout(function () {
     document.getElementById("happy").classList.remove("bounce");
-  }, 2000);
-}
+  }, 1250);
+  document.getElementById("wee").play();
+});
 
-//make a flatten animation when the sad button is clicked
-function flatten() {
+/* SAD */
+document.getElementById("sad").addEventListener("click", function () {
   document.getElementById("sad").classList.add("flatten");
   setTimeout(function () {
     document.getElementById("sad").classList.remove("flatten");
-  }, 1000);
-}
+  }, 1200);
+  document.getElementById("moan").play();
+});
 
-/***************** 
-  EVENTLISTNERS 
- ******************/
-
-//add an event listener to the silly button that calls the shake function
-document.getElementById("silly").addEventListener("click", shake);
-
-//add an event listener to the angry button that calls the shake function
-document.getElementById("angry").addEventListener("click", tremble);
-
-//add an event listener to the happy button that calls the bounce function
-document.getElementById("happy").addEventListener("click", bounce);
-
-//add an event listener to the sad button that calls the flatten function
-document.getElementById("sad").addEventListener("click", flatten);
-
-//call the fart function when the silly button is clicked
-document.getElementById("silly").addEventListener("click", fart);
-
-//call the yell function when the angry button is clicked
-document.getElementById("angry").addEventListener("click", yell);
-
-//call the bounce function when the happy button is clicked
-document.getElementById("happy").addEventListener("click", wee);
-
-//call the moan function when the sad button is clicked
-document.getElementById("sad").addEventListener("click", moan);
+/* SCARED */
+document.getElementById("scared").addEventListener("click", function () {
+  document.getElementById("scared").classList.add("hide");
+  setTimeout(function () {
+    document.getElementById("scared").classList.remove("hide");
+  }, 1500);
+  document.getElementById("scream").play();
+});
