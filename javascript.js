@@ -1,21 +1,22 @@
 /************************************** 
-       ANIMATIONS and SOUNDS
+       ANIMATION and SOUND
  *************************************/
 
-//put each mp3's in a collection
-var fart = new Audio("Audio/fart.mp3");
-var gasp = new Audio("Audio/gasp.mp3");
-var moan = new Audio("Audio/moan.mp3");
-var wee = new Audio("Audio/wee.mp3");
-var yell = new Audio("Audio/yell.mp3");
+//puts fart.mp3, gasp.mp3, moan.mp3, wee.mp3 and yell.mp3 in a object
+var audio = {
+  fart: new Audio("Audio/fart.mp3"),
+  gasp: new Audio("Audio/gasp.mp3"),
+  moan: new Audio("Audio/moan.mp3"),
+  wee: new Audio("Audio/wee.mp3"),
+  yell: new Audio("Audio/yell.mp3"),
+};
 
 /* SILLY */
 //Adds an event listener to the button calling the function that:
 document.getElementById("silly").addEventListener("click", function silly() {
-  // - makes a variable for getting the audio element by ID
-
-  // - uses the variable to call the play method on the audio
-  fart.play();
+  //
+  //- gets the mp3 variable from the audio object and plays it
+  audio.fart.play();
 
   // - makes a variable for getting the button by ID
   const silly = document.getElementById("silly");
@@ -32,7 +33,7 @@ document.getElementById("silly").addEventListener("click", function silly() {
 
 /* ANGRY */
 document.getElementById("angry").addEventListener("click", function angry() {
-  yell.play();
+  audio.yell.play();
 
   const angry = document.getElementById("angry");
   angry.classList.add("tremble");
@@ -43,7 +44,7 @@ document.getElementById("angry").addEventListener("click", function angry() {
 
 /* HAPPY */
 document.getElementById("happy").addEventListener("click", function happy() {
-  wee.play();
+  audio.wee.play();
 
   const happy = document.getElementById("happy");
   happy.classList.add("bounce");
@@ -54,7 +55,7 @@ document.getElementById("happy").addEventListener("click", function happy() {
 
 /* SAD */
 document.getElementById("sad").addEventListener("click", function sad() {
-  moan.play();
+  audio.moan.play();
 
   const sad = document.getElementById("sad");
   sad.classList.add("flatten");
@@ -65,7 +66,7 @@ document.getElementById("sad").addEventListener("click", function sad() {
 
 /* SCARED */
 document.getElementById("scared").addEventListener("click", function scared() {
-  gasp.play();
+  audio.gasp.play();
 
   const scared = document.getElementById("scared");
   scared.classList.add("hide");
