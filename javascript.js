@@ -2,8 +2,12 @@
        ANIMATIONS and SOUNDS
  *************************************/
 
-//put fart.mp3 in a variable
+//put each mp3's in a collection
 var fart = new Audio("Audio/fart.mp3");
+var gasp = new Audio("Audio/gasp.mp3");
+var moan = new Audio("Audio/moan.mp3");
+var wee = new Audio("Audio/wee.mp3");
+var yell = new Audio("Audio/yell.mp3");
 
 /* SILLY */
 //Adds an event listener to the button calling the function that:
@@ -28,7 +32,6 @@ document.getElementById("silly").addEventListener("click", function silly() {
 
 /* ANGRY */
 document.getElementById("angry").addEventListener("click", function angry() {
-  const yell = document.getElementById("yell");
   yell.play();
 
   const angry = document.getElementById("angry");
@@ -40,7 +43,6 @@ document.getElementById("angry").addEventListener("click", function angry() {
 
 /* HAPPY */
 document.getElementById("happy").addEventListener("click", function happy() {
-  const wee = document.getElementById("wee");
   wee.play();
 
   const happy = document.getElementById("happy");
@@ -52,7 +54,6 @@ document.getElementById("happy").addEventListener("click", function happy() {
 
 /* SAD */
 document.getElementById("sad").addEventListener("click", function sad() {
-  const moan = document.getElementById("moan");
   moan.play();
 
   const sad = document.getElementById("sad");
@@ -64,7 +65,6 @@ document.getElementById("sad").addEventListener("click", function sad() {
 
 /* SCARED */
 document.getElementById("scared").addEventListener("click", function scared() {
-  const gasp = document.getElementById("gasp");
   gasp.play();
 
   const scared = document.getElementById("scared");
