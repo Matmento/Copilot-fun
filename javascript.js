@@ -3,49 +3,71 @@
  *************************************/
 
 /* SILLY */
-/* Add an event listener to the silly button that:
-- Plays the fart sound from the DOM by ID.
-- And that calls the shake function, that adds and then after 1500 ms removes the shake class. */
-document.getElementById("silly").addEventListener("click", function () {
-  document.getElementById("fart").play();
-  document.getElementById("silly").classList.add("shake");
+//Adds an event listener to the button calling the function that:
+document.getElementById("silly").addEventListener("click", function silly() {
+  // - makes a variable for getting the audio element by ID
+  const fart = document.getElementById("fart");
+
+  // - uses the variable to call the play method on the audio
+  fart.play();
+
+  // - makes a variable for getting the button by ID
+  const silly = document.getElementById("silly");
+
+  // - uses the variable to add a class to the button
+  silly.classList.add("shake");
+
+  // - sets a timer which executes a function after a set amount of time
   setTimeout(function () {
-    document.getElementById("silly").classList.remove("shake");
+    // - removes the class from the button after the timer has finished
+    silly.classList.remove("shake");
   }, 1500);
 });
 
 /* ANGRY */
-document.getElementById("angry").addEventListener("click", function () {
-  document.getElementById("yell").play();
-  document.getElementById("angry").classList.add("tremble");
+document.getElementById("angry").addEventListener("click", function angry() {
+  const yell = document.getElementById("yell");
+  yell.play();
+
+  const angry = document.getElementById("angry");
+  angry.classList.add("tremble");
   setTimeout(function () {
-    document.getElementById("angry").classList.remove("tremble");
+    angry.classList.remove("tremble");
   }, 1250);
 });
 
 /* HAPPY */
-document.getElementById("happy").addEventListener("click", function () {
-  document.getElementById("wee").play();
-  document.getElementById("happy").classList.add("bounce");
+document.getElementById("happy").addEventListener("click", function happy() {
+  const wee = document.getElementById("wee");
+  wee.play();
+
+  const happy = document.getElementById("happy");
+  happy.classList.add("bounce");
   setTimeout(function () {
-    document.getElementById("happy").classList.remove("bounce");
-  }, 1250);
+    happy.classList.remove("bounce");
+  }, 1000);
 });
 
 /* SAD */
-document.getElementById("sad").addEventListener("click", function () {
-  document.getElementById("moan").play();
-  document.getElementById("sad").classList.add("flatten");
+document.getElementById("sad").addEventListener("click", function sad() {
+  const moan = document.getElementById("moan");
+  moan.play();
+
+  const sad = document.getElementById("sad");
+  sad.classList.add("flatten");
   setTimeout(function () {
-    document.getElementById("sad").classList.remove("flatten");
+    sad.classList.remove("flatten");
   }, 1200);
 });
 
 /* SCARED */
-document.getElementById("scared").addEventListener("click", function () {
-  document.getElementById("gasp").play();
-  document.getElementById("scared").classList.add("hide");
+document.getElementById("scared").addEventListener("click", function scared() {
+  const gasp = document.getElementById("gasp");
+  gasp.play();
+
+  const scared = document.getElementById("scared");
+  scared.classList.add("hide");
   setTimeout(function () {
-    document.getElementById("scared").classList.remove("hide");
+    scared.classList.remove("hide");
   }, 1500);
 });
