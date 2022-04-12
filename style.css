@@ -1,9 +1,29 @@
+/* color system */
 :root {
-  --silly-color: #6a4a3c;
-  --angry-color: #cc333f;
-  --happy-color: #edc952;
-  --sad-color: #00a0b0;
-  --scared-color: #5b20ad;
+  /* silly color*/
+  color: hsl(19, 38%, 39%);
+  --silly-color-base: 19;
+  --silly-color: hsla(var(--silly-color-base), 38%, 39%, 100%);
+
+  /* angry color */
+  color: hsl(355, 60%, 50%);
+  --angry-color-base: 355;
+  --angry-color: hsla(var(--angry-color-base), 60%, 50%, 100%);
+
+  /* happy color */
+  color: hsl(46, 91%, 43%);
+  --happy-color-base: 46;
+  --happy-color: hsla(var(--happy-color-base), 91%, 43%, 100%);
+
+  /* sad color */
+  color: hsl(185, 100%, 35%);
+  --sad-color-base: 185;
+  --sad-color: hsla(var(--sad-color-base), 100%, 35%, 100%);
+
+  /* scared color */
+  color: hsl(265, 69%, 50%);
+  --scared-color-base: 265;
+  --scared-color: hsla(var(--scared-color-base), 69%, 50%, 100%);
 }
 
 body {
@@ -17,7 +37,6 @@ button {
   background-color: #ffffff;
   color: #000000eb;
   border: 1px solid #000000eb;
-  border-radius: 2px;
   padding: 24px;
   min-width: 100px;
   cursor: pointer;
@@ -27,6 +46,33 @@ button {
   will-change: transform;
 }
 
+/* HOVERS */
+#silly:hover {
+  background-color: var(--silly-color);
+  color: #fff;
+  border: none;
+}
+#angry:hover {
+  background-color: var(--angry-color);
+  color: #fff;
+  border: none;
+}
+#scared:hover {
+  background-color: var(--scared-color);
+  color: #fff;
+  border: none;
+}
+
+#happy:hover {
+  background-color: var(--happy-color);
+  color: #fff;
+  border: none;
+}
+#sad:hover {
+  background-color: var(--sad-color);
+  color: #fff;
+  border: none;
+}
 /*
  
    ____  _   _    _    _  _______      _    _   _ ___ __  __    _  _____ ___ ___  _   _ 
@@ -48,19 +94,25 @@ button {
 @keyframes shake {
   0% {
     transform-origin: bottom right;
+    background-color: var(--silly-color);
+    border: none;
+    color: #fff;
   }
 
   40% {
     transform-origin: bottom right;
     transform: rotate(10deg);
+    background-color: var(--silly-color);
+    border: none;
+    color: #fff;
   }
 
   75% {
     transform-origin: bottom right;
     transform: rotate(10deg);
-    background-color: #fff;
-    border: 1px solid #000000eb;
-    color: #000000eb;
+    background-color: var(--silly-color);
+    border: none;
+    color: #fff;
   }
 
   80%,
@@ -135,6 +187,9 @@ button {
 .bounce {
   transform-origin: bottom;
   animation: bounce 1.3s cubic-bezier(0.28, 0.84, 0.42, 1);
+  color: #fff;
+  background-color: var(--happy-color);
+  border: none;
 }
 
 @keyframes bounce {
@@ -143,7 +198,7 @@ button {
   }
   10% {
     transform: scale(1.1, 0.5) translateY(0);
-    background-color: var(--happy-color);
+
     border: none;
   }
   30% {
@@ -154,8 +209,6 @@ button {
   }
   57% {
     transform: scale(1, 1) translateY(-7px);
-    background-color: var(--happy-color);
-    border: none;
   }
 
   64% {
@@ -186,6 +239,7 @@ button {
   animation-direction: both;
   animation-fill-mode: none;
   background-color: var(--sad-color);
+  color: #fff;
   /* shorthand 
   animation: scale-down-bottom 1s ease 0s 1 normal none;
   */
