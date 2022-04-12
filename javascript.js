@@ -2,11 +2,13 @@
        ANIMATIONS and SOUNDS
  *************************************/
 
+//put fart.mp3 in a variable
+var fart = new Audio("Audio/fart.mp3");
+
 /* SILLY */
 //Adds an event listener to the button calling the function that:
 document.getElementById("silly").addEventListener("click", function silly() {
   // - makes a variable for getting the audio element by ID
-  const fart = document.getElementById("fart");
 
   // - uses the variable to call the play method on the audio
   fart.play();
